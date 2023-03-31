@@ -56,7 +56,7 @@ gunicorn main:app -b 0.0.0.0:5000
 
 ### 部署到 deta.dev
 
-[![Deploy](https://button.deta.dev/1/svg)](https://go.deta.dev/deploy?repo=https://github.com/hillerliao/rsshub-python)
+[![Deploy](https://button.deta.dev/1/svg)](https://go.deta.dev/deploy?repo=https://github.com/ddjcmc/rsshub-python)
 
 或  
 
@@ -70,7 +70,7 @@ gunicorn main:app -b 0.0.0.0:5000
 
 ### 部署到 Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhillerliao%2Frsshub-python)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fddjcmc%2Frsshub-python)
 
 ### Docker 部署
 
