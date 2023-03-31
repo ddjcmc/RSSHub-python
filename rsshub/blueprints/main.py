@@ -36,6 +36,12 @@ def filter_content(ctx):
 
 
 #---------- feed路由从这里开始 -----------#
+@bp.route('/zodgame/fid/<int:fid>/page/<int:page>')
+def zodgame_fid(fid, page):
+    from rsshub.spiders.zodgame.fid import ctx
+    return render_template('main/atom.xml', **filter_content(ctx(fid, page)))
+
+
 @bp.route('/cninfo/announcement/<string:stock_id>/<string:category>')
 @bp.route('/cninfo/announcement')
 def cninfo_announcement(stock_id='', category=''):
