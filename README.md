@@ -9,7 +9,7 @@ RSSHub 是一个轻量、易于扩展的 RSS 生成器，可以给任何奇奇�
 
 **其实用Python写爬虫要比JS更方便:p**
 
-DEMO地址：https://pyrsshub.vercel.app
+
 
 
 ## 交流
@@ -41,7 +41,7 @@ Discord Server： [https://discord.gg/4BZBZuyx7p](https://discord.gg/4BZBZuyx7p)
 首先确保安装了[pipenv](https://github.com/pypa/pipenv)
 
 ``` bash
-git clone https://github.com/alphardex/RSSHub-python
+git clone https://github.com/ddjcmc/RSSHub-python
 cd RSSHub-python
 pipenv install --dev
 pipenv shell
@@ -77,3 +77,6 @@ gunicorn main:app -b 0.0.0.0:5000
 制作镜像文件 `docker build -t pyrsshub:latest .`
 
 创建docker容器 `docker run -dit --name pyrsshub -p 8080:80 pyrsshub:latest`
+
+
+# 来源 https://github.com/hillerliao/RSSHub-python
