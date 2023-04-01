@@ -19,15 +19,20 @@ def parse(post:Selector):
     item['pubDate'] = post.xpath('.//td[2]/em//span/@title | .//td[2]/em//span/text()').extract_first()
     item['author'] = post.xpath('.//td[2]/cite/a/text()').get()
     #  get post html
-    res = fetch(url=item['link'], headers=DEFAULT_HEADERS,proxies=proxies)
+    if proxies is not None or proxies!={}:
+        res = fetch(url=item['link'], headers=DEFAULT_HEADERS,proxies=proxies)
+    else:
+        res = fetch(url=item['link'], headers=DEFAULT_HEADERS)
     item['description'] = res.css('.pcb').extract_first()
     return item
 
 def ctx(fid:str|int,page:int|str=1):
     # get index html
     url = get_zod_module_url(fid,page)
-    
-    res = fetch(url=url, headers=DEFAULT_HEADERS,proxies=proxies)
+    if proxies is not None or proxies!={}:
+        res = fetch(url=url, headers=DEFAULT_HEADERS,proxies=proxies)
+    else:
+        res = fetch(url=item['link'], headers=DEFAULT_HEADERS)
     posts = res.css('tbody[id*="normalthread_"]')
 
     
