@@ -8,6 +8,8 @@ from rsshub.utils import DEFAULT_HEADERS,fetch
 
 DEFAULT_HEADERS.update({'cookie': cookie})
 
+
+
 domain = 'https://zodgame.xyz'
 
 def parse(post:Selector):
@@ -26,8 +28,13 @@ def ctx(fid:str|int,page:int|str=1):
     url = get_zod_module_url(fid,page)
     
     res = fetch(url=url, headers=DEFAULT_HEADERS,proxies=proxies)
-    posts_ = res.css('tbody[id*="normalthread_"]')
-    posts = posts_ if len(posts_)<10 else posts_[:10]
+    posts = res.css('tbody[id*="normalthread_"]')
+    
+    # get 10 post  or use route limit it
+    # posts_ = res.css('tbody[id*="normalthread_"]')
+    # posts = posts_ if len(posts_)<10 else posts_[:10]
+    
+    
     return  {
         'title': f'Zodgame - {fid_model_dict[int(fid)]}',
         'link': get_zod_module_url(fid),
