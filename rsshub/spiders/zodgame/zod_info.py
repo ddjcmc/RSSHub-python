@@ -2,7 +2,7 @@
 cookie = ''
 
 # your proxy 
-# like {"http":"http://xxxx:xxx","https":"https://xxxx:xxx"}
+# like {"http":"http://xxxx:xxx","https":"http://xxxx:xxx"}
 proxies =  {}
 
 fid_model_dict = {3: 'I社前哨站', 119: '综合游戏资讯', 133: 'Room Girl', 127: '恋活！Sunshine', 99: 'AI少女', 106: 'Honey Select2', 98: '恋爱活动', 93: 'Play Home', 82: 'Honey Select', 97: '欲望工坊', 67: '人工学园2', 2: 'I社历代', 4: 'MOD&插件制作交流', 84: '故事创作及交流', 109: '求物及咨询区', 10: '3D动画&CG分享', 100: '日系3D游戏专区', 75: '3D定制女仆专区', 102: 'VAM 专区',
