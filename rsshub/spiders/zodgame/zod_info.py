@@ -8,7 +8,7 @@ fid_model_dict = {3: 'I社前哨站', 119: '综合游戏资讯', 133: 'Room Girl
                  68: '欧美3D游戏专区', 132: 'Fallen Doll讨论区', 16: '大水吧', 17: '萌系文化胡侃室', 30: '萌绘部室', 18: '二次元贴图板', 11: 'GAL交流', 120: '手游交流', 13: '绅士游戏集散地', 25: 'CG同萌', 12: '萌你妹果园', 111: 'MMD专区', 96: ' Comic Market', 110: '裸奔求物公园', 104: '游戏广场', 36: '动漫园地', 27: '妄想心音', 122: '银发教会', 101: '靴下汉化组', 20: '招募启事', 21: '意见及申诉区', 19: '版主议会'}
 
 def get_zod_space_url( pure_uid: str = '763195', page: int = 1):
-        '''获取用户空间'''
+        '''get space url'''
         print(f'uid={pure_uid} \tpage={page}')
         str_page = f'https://zodgame.xyz/home.php?mod=space&uid={pure_uid}&do=thread&view=me&type=thread&order=dateline&from=space&page={page}'
         str_nopage = f'https://zodgame.xyz/home.php?mod=space&uid={pure_uid}&do=thread&view=me&type=thread&from=space'
@@ -16,7 +16,7 @@ def get_zod_space_url( pure_uid: str = '763195', page: int = 1):
 
 
 def get_zod_module_url(fid: int|str, page: int = 1):
-        '''获取模块的url'''
+        '''get module url'''
         str_nopage = f'https://zodgame.xyz/forum.php?mod=forumdisplay&fid={fid}&orderby=dateline&filter=author'
         str_page = f'https://zodgame.xyz/forum.php?mod=forumdisplay&fid={fid}&orderby=dateline&filter=author&page={page}'
         return str_page if page > 1 else str_nopage
