@@ -32,11 +32,9 @@ def ctx(fid:str|int,page:int|str=1):
     if proxies is not None or proxies!={}:
         res = fetch(url=url, headers=DEFAULT_HEADERS,proxies=proxies)
     else:
-        res = fetch(url=item['link'], headers=DEFAULT_HEADERS)
+        res = fetch(url=url, headers=DEFAULT_HEADERS)
     posts = res.css('tbody[id*="normalthread_"]')
 
-    
-    
     return  {
         'title': f'Zodgame - {fid_model_dict[int(fid)]}',
         'link': get_zod_module_url(fid),
